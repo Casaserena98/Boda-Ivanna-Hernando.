@@ -1,0 +1,201 @@
+/* =========================================
+   CONFIGURACIÓN GENERAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #ffffff;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   SOBRE
+========================================= */
+
+.sobre {
+    position: relative;
+
+    width: 100%;
+    max-width: 900px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   IMAGEN
+========================================= */
+
+.sobre img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   BOTÓN ABRIR INVITACIÓN
+========================================= */
+
+#abrirInvitacion {
+
+    position: absolute;
+
+    /* POSICIÓN */
+    left: 50%;
+    bottom: 8%;
+
+    transform: translateX(-50%);
+
+
+    /* TAMAÑO */
+    width: 230px;
+    height: 58px;
+
+
+    /* FONDO */
+    background-color: #c6a15b;
+
+
+    /* BORDE */
+    border: 1px solid #c6a15b;
+
+    border-radius: 0;
+
+
+    /* TEXTO */
+    color: #d8b66b;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 17px;
+
+    font-weight: normal;
+
+    letter-spacing: 0.8px;
+
+    text-transform: uppercase;
+
+
+    /* CURSOR */
+    cursor: pointer;
+
+
+    /* CAPA */
+    z-index: 100;
+
+
+    /* IMPORTANTE:
+       NO CAMBIAMOS POSICIÓN NI TAMAÑO
+       DURANTE EL HOVER */
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* =========================================
+   CURSOR ENCIMA
+========================================= */
+
+#abrirInvitacion:hover {
+
+    /* SE QUEDA EXACTAMENTE EN EL MISMO SITIO */
+    transform: translateX(-50%);
+
+
+    /* ILUMINACIÓN DORADA */
+    background-color: #b9964f;
+
+    color: #ffffff;
+
+    border-color: #e5c97c;
+
+
+    /* BRILLO */
+    box-shadow:
+        0 0 8px rgba(214, 174, 91, 0.75),
+        0 0 18px rgba(214, 174, 91, 0.45);
+}
+
+
+/* =========================================
+   AL HACER CLIC
+========================================= */
+
+#abrirInvitacion:active {
+
+    transform: translateX(-50%);
+
+    box-shadow:
+        0 0 12px rgba(214, 174, 91, 0.8);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 768px) {
+
+    .sobre {
+        width: 100%;
+    }
+
+
+    #abrirInvitacion {
+
+        width: 210px;
+
+        height: 55px;
+
+        font-size: 16px;
+
+        bottom: 7%;
+    }
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 480px) {
+
+    #abrirInvitacion {
+
+        width: 190px;
+
+        height: 52px;
+
+        font-size: 15px;
+
+        bottom: 6%;
+    }
+}
